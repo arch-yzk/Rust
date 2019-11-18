@@ -15,3 +15,16 @@ impl Rectangle
         }
     }
 }
+
+fn main()
+{
+    let mut rectvec = Vec::new();
+    rectvec.push(Rectangle::new(10, 20));
+    rectvec.push(Rectangle::new(100, 50));
+    rectvec.push(Rectangle::new(30, 90));
+
+    for rect in &rectvec
+    {
+        println!("幅{}、高さ{}の{}を生成しました。", rect.width, rect.height, rect.name);
+    }
+}
